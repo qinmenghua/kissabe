@@ -1,0 +1,53 @@
+<h2>Kissa.be API</h2>
+You can use your applications!.
+<h3>Shortener API</h3>
+ Kissa.be Shortener API url; <a href="http://kissa.be/api/shortener">http://kissa.be/api/shortener</a> with POST or GET
+methods.
+
+<h4>Examples;</h4>
+<div style="padding-left:40px">
+    <h5>URL Shortener</h5>
+    <a href="http://kissa.be/api/shortener/url?content=http://google.com">http://kissa.be/api/shortener/url?content=http://google.com</a>
+
+    <h5>Email Shortener</h5>
+    <a
+    href="http://kissa.be/api/shortener/email?content=contact@dahius.com">http://kissa.be/api/shortener/email?content=contact@dahius.com</a>
+
+    <h5>Text Shortener</h5>
+    <pre>
+    &lt;form action="http://kissa.be/api/shortener/text" method="post"&gt;
+    &nbsp; &nbsp;&lt;textarea name="content"&gt;&lt;/textarea&gt;
+    &nbsp; &nbsp;...
+    &lt;/form&gt;
+    </pre>
+
+    <h5>Image Shortener</h5>
+    <div style="padding-left:40px">
+        <h5>From Web</h5>
+        <pre>
+        &lt;form action="http://kissa.be/api/shortener/image" method="post"&gt;
+        &nbsp; &nbsp;&lt;input type="text" name="content" id="url" /&gt;
+        &nbsp; &nbsp;...
+        &lt;/form&gt;
+        </pre>
+
+        <h5>From Local</h5>
+        <pre>
+        &lt;form action="http://kissa.be/api/shortener/image" method="post" enctype="multipart/form-data"&gt;
+        &nbsp; &nbsp;&lt;input type="file" name="content" /&gt;
+        &nbsp; &nbsp;...
+        &lt;/form&gt;
+        </pre>
+    </div>
+</div>
+<h3>Expender API</h3>
+
+Kissa.be Expander API url; <a href="http://kissa.be/api/expander">http://kissa.be/api/expander/{code}</a> with POST or
+GET methods.
+
+<h4>Examples;</h4>
+<a href="http://kissa.be/api/expander/g">http://kissa.be/api/expander/<b>g</b></a>
+
+<p/>
+<p/>
+

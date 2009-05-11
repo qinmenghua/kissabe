@@ -1,0 +1,12 @@
+<form action="{%uri path="/shortener/set"}" method="post">
+
+{%*editor InstanceName="content_data" *}
+
+<textarea name="content_data" rows="8" cols="60"></textarea>
+
+<br/>
+
+<input value="text" name="status" type="hidden"/>
+<input class="button" value="shorten this" type="submit"/>
+
+</form>

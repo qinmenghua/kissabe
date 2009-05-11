@@ -1,0 +1,114 @@
+Url:
+  tableName: url
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    code:
+      type: string(256)
+      notnull: true
+    url:
+      type: string(1024)
+      notnull: true
+    domain:
+      type: string(256)
+      notnull: true
+    type:
+      type: enum(5)
+      values: [url, email, text, image]
+      notnull: true
+    status:
+      type: enum(7)
+      values: [active, passive, deleted]
+      notnull: true
+Visitor:
+  tableName: visitor
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    url_id:
+      type: integer(4)
+      notnull: true
+    referrer:
+      type: string(1024)
+      notnull: true
+    created_by:
+      type: string(32)
+      notnull: true
+    created_on:
+      type: timestamp(25)
+      notnull: true
+    status:
+      type: enum(4)
+      values: [live, dead]
+      notnull: true
+User:
+  tableName: user
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+    username:
+      type: string(256)
+      notnull: true
+    password:
+      type: string(512)
+      notnull: true
+    email:
+      type: string(512)
+      notnull: true
+    created_by:
+      type: string(32)
+      notnull: true
+    created_on:
+      type: timestamp(25)
+      notnull: true
+    status:
+      type: enum(7)
+      values: [pending, live, dead]
+      notnull: true
+Ownership:
+  tableName: ownership
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    user_id:
+      type: integer(4)
+      notnull: true
+    url_id:
+      type: integer(4)
+      notnull: true
+    created_by:
+      type: string(32)
+      notnull: true
+    created_on:
+      type: timestamp(25)
+      notnull: true
+    type:
+      type: enum(9)
+      values: [created, favorited]
+      notnull: true
+    status:
+      type: enum(4)
+      values: [live, dead]
+      notnull: true
+Statistic:
+  tableName: statistic
+  columns:
+    id:
+      type: integer(4)
+      notnull: true
+    st_key:
+      type: string(256)
+      notnull: true
+    st_value:
+      type: string(512)
+      notnull: true

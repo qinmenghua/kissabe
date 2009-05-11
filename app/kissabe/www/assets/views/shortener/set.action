@@ -1,0 +1,12 @@
+<h2>{% $shortener->url}</h2>
+<a href="javascript:///" id="copied" onclick="cSn(\''.{%$shortener->url}.'\', \'copied\');">Copy to Clipboard</a><br/>
+<div id="blip" style="left: 339px; top: 198px; display:none; padding:7px 0 7px 0; font-weight:bold;">it's copied to clipboard ;-)</div>
+<br/>
+Your shortened URL is <a href='{%$shortener->url}'>{%$shortener->url}</a> [<a href='{%$shortener->url}' style='font-size:8px;'
+target='{%$shortener->code}'>(open in new window)</a>] ({%$shortener->length}) characters!.
+<p/>
+
+<p/>You can write explanation in the user friendly URL
+<br/>
+Example <b>user-friendly-url-explanation-area</b><p/>
+<div id="flashcopier"><embed src="flashcopier.swf" FlashVars="clipboard={short_url}" width="0" height="0" type="application/x-shockwave-flash"></embed></div>

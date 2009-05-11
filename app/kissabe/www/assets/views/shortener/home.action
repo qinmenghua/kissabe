@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+	<title>kissa.be! - url shortener"</title>
+	{%style name="style.css"}
+	<link rel="shortcut icon" href='{%'/favicon.png'|site_root}'>
+	<meta name="keywords" content="URL shortener,shorten,URL,link,smaller,shorten web address">
+	<meta name="description" content="kissa.be! - url shortener">
+
+	{%script name="jquery.js"}
+	{%script name="kissa.js"}
+
+	<script language="JavaScript" type="text/javascript"> 
+        $(document).ready(function() { start_page(); });
+    </script>
+</head>
+
+<body>
+	<div id="frontpagecontainer"></div>
+	<div id="frontpage">
+    {%image src="kissa-logo.png" alt="kissa.be! logo"}
+	<div id="menutext">
+        {%link id="kissa_url" href="/shortener/url" class="menuitem_selected" text="url"}
+        {%link id="kissa_mail" href="/shortener/email" class="menuitem" text="email"}
+        {%link id="kissa_text" href="/shortener/text" class="menuitem" text="text"}
+        {%link id="kissa_image" href="/shortener/image" class="menuitem" text="image"}
+        {%*link id="kissa_search" href="/shortener/search" class="menuitem" text="search"*}
+
+	</div>
+	<div id="content"></div>
+	<br/>
+<center>
+	<div id="footer">
+		<div id="language-menu">
+        
+		<form id="current_lang" method="post">
+			Languages
+			<select id="language" name="lang">
+				<option value="en_US">English</option>
+{%*	<option value="tr_TR">Türkçe</option> *}
+			</select>
+{%*		<br/> {%link href="kissa.pot" text="Add New Language"}  *}
+		</form>
+        
+		</div>
+
+		<div id="footer-menu">
+            {%link href="/site/termsofuse" text="terms of use"} | 
+            {%link href="/site/privacy" text="privacy"} | 
+            {%link href="/api" text="api"} | 
+            {%link href="/site/contact" text="contact"} | 
+            {%link href="http://code.google.com/p/kissabe/" target="new" text='download <sup
+                style="color:red;">v.2.1</sup>'}
+		</div>
+
+		<p><a href="http://www.dahius.com/">© 2008 - Dahius</a></p>
+	</div>
+</center>
+</div>
+<div style="display:none;">
+<!-- Piwik -->
+<a href="http://piwik.org" title="Google Analytics alternative" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dahius.com/tools/analytics/" :
+                 "http://www.dahius.com/tools/analytics/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 1;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Google Analytics alternative <img src="http://www.dahius.com/tools/analytics/piwik.php?idsite=1"
+style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+</div>
+
+</body>
+</html>

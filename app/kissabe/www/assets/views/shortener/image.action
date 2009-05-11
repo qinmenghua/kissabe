@@ -1,0 +1,39 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#from_web").click(function() {
+            $("#content_web").show();
+            $("#content_file").hide();
+
+            $("#label_web").css("font-weight","bold");
+            $("#label_file").css("font-weight","400");
+
+
+        });
+
+        $("#from_file").click(function() {
+            $("#content_file").show();
+            $("#content_web").hide();
+
+            $("#label_file").css("font-weight","bold");
+            $("#label_web").css("font-weight","400");
+        });
+
+        $("#from_web").click();
+
+    });
+</script>
+
+<form action="{%uri path="/shortener/set"}" method="post" enctype="multipart/form-data">
+    <input id="from_web" type="radio" name="from" value="url" checked />
+    <label id="label_web" for="from_web">From Web</label>
+    <input id="from_file" type="radio" name="from" value="file" />
+    <label id="label_file" for="from_file">From Local</label>
+    <br/>
+
+    <input type="file" id="content_file" name="content_data" class="textbox" size="25"/>
+
+    <input type="text" id="content_web" name="content_data" class="textbox" size="25"/>
+
+<input value="image" name="status" type="hidden">
+<input class="button" value="shorten this" type="submit">
+</form>

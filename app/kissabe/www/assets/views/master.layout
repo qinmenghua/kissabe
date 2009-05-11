@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<title>kissa.be! - url shortener</title>
+<link rel="shortcut icon" href="favicon.png">
+<meta name="keywords" content="URL shortener,shorten,URL,link,smaller,shorten web address">
+<meta name="description" content="kissa.be! - url shortener">
+
+{%style name="style.css"}
+{%script name="jquery.js"}
+{%script name="kissa.js"}
+
+</head><body>
+
+<div id="menutop">
+{%image src="kissa-logo-mini.png" href="/home" alt="kissa.be! logo"}
+</div>
+<div id="main">{%placeholder}</div>
+
+<hr/>
+<div id="footer" style="text-align:center; width:100%;">
+    <div id="footer-menu">
+        {%link href="/site/termsofuse" text="terms of use"} | 
+        {%link href="/site/privacy" text="privacy"} |
+        {%link href="/api" text="api"} | 
+        {%link href="/site/contact" text="contact"} | 
+        {%link href="http://code.google.com/p/kissabe/" target="new" 
+               text='download <sup style="color:red;">v.2.1</sup>'}
+    </div>
+    <p><a href="http://www.dahius.com/">© 2008 - Dahius</a></p>
+</div>
+<div style="display:none;">
+<!-- Piwik -->
+<a href="http://piwik.org" title="Google Analytics alternative" onclick="window.open(this.href);return(false);">
+<script type="text/javascript">
+var pkBaseURL = (("https:" == document.location.protocol) ? "https://www.dahius.com/tools/analytics/" :
+                 "http://www.dahius.com/tools/analytics/");
+document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script type="text/javascript">
+piwik_action_name = '';
+piwik_idsite = 1;
+piwik_url = pkBaseURL + "piwik.php";
+piwik_log(piwik_action_name, piwik_idsite, piwik_url);
+</script>
+<object><noscript><p>Google Analytics alternative <img src="http://www.dahius.com/tools/analytics/piwik.php?idsite=1"
+style="border:0" alt=""/></p></noscript></object></a>
+<!-- End Piwik Tag -->
+</div>
+</body>
+</html>

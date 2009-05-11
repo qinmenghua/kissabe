@@ -1,0 +1,4 @@
+<div style="padding:20px; text-align:center; vertical-align:middle;">
+	<h2>{% $message}</h2>
+<center>{%link href=$back_url text="Go Back"}</center>
+</div>
